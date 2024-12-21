@@ -27,11 +27,7 @@ public class PlayGameResponse2
     public string PlayerColor { get; set; }
     public List<PlayedCell> PlayRecord { get; set; } = new List<PlayedCell>();
 
-    public PlayGameResponse2()
-    {
-        
-        PlayRecord = new List<PlayedCell>();
-    }
+   
 
     public class PlayedCell
     {
@@ -39,7 +35,7 @@ public class PlayGameResponse2
         public int NewPosition { get; set; }
         public string CellType { get; set; }
 
-        // Constructor to initialize PlayedCell
+       
         public PlayedCell(int oldPosition, int newPosition, string cellType)
         {
             OldPosition = oldPosition;
@@ -47,28 +43,21 @@ public class PlayGameResponse2
             CellType = cellType;
         }
 
-        // Static factory method for creating a PlayedCell
+       
         public static PlayedCell CallPlayRecord(int oldPosition, int newPosition, string cellType)
         {
             return new PlayedCell(oldPosition, newPosition, cellType);
         }
     }
 
-    // Method to create and add a play record
-    public void CreatePlayRecord(int oldPosition, int newPosition, string cellType)
+   
+    public PlayedCell CreatePlayRecord(int oldPosition, int newPosition, string cellType)
     {
         PlayedCell newRecord = PlayedCell.CallPlayRecord(oldPosition, newPosition, cellType);
-        PlayRecord.Add(newRecord);
+        return newRecord;
     }
 
-    // Display all play records (for testing purposes)
-    public void DisplayPlayRecords()
-    {
-        Console.WriteLine($"Player: {PlayerName}, Color: {PlayerColor}");
-        foreach (var record in PlayRecord)
-        {
-            Console.WriteLine($"OldPosition: {record.OldPosition}, NewPosition: {record.NewPosition}, CellType: {record.CellType}");
-        }
-    }
+   
+    
 }
 
