@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LudoSnakeAndLadder.Api", "LudoSnakeAndLadder\LudoSnakeAndLadder.Api.csproj", "{C3C0DBEC-B2A8-41AE-ABB4-6628F2C53F1F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LudoSnakeAndLadder.Databases", "LudoSnakeAndLadder.Databases\LudoSnakeAndLadder.Databases.csproj", "{18ADB88D-ED3D-47FB-8CEF-07E23DBBCAEC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LudoSnakeAndLadder.Domain", "LudoSnakeAndLadder.Domain\LudoSnakeAndLadder.Domain.csproj", "{003639C5-9C36-4E60-8519-B5FF677F6858}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Testing", "Testing\Testing.csproj", "{FE629A6F-10F8-4282-B554-2CEE6C104BC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LudoSnakeAndLadder.Client.Api", "LudoSnakeAndLadder.Client.Api\LudoSnakeAndLadder.Client.Api.csproj", "{420A4759-70B9-40BA-9283-AD57D5EDC7A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C3C0DBEC-B2A8-41AE-ABB4-6628F2C53F1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3C0DBEC-B2A8-41AE-ABB4-6628F2C53F1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3C0DBEC-B2A8-41AE-ABB4-6628F2C53F1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3C0DBEC-B2A8-41AE-ABB4-6628F2C53F1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18ADB88D-ED3D-47FB-8CEF-07E23DBBCAEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18ADB88D-ED3D-47FB-8CEF-07E23DBBCAEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18ADB88D-ED3D-47FB-8CEF-07E23DBBCAEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18ADB88D-ED3D-47FB-8CEF-07E23DBBCAEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{003639C5-9C36-4E60-8519-B5FF677F6858}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{003639C5-9C36-4E60-8519-B5FF677F6858}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{003639C5-9C36-4E60-8519-B5FF677F6858}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{003639C5-9C36-4E60-8519-B5FF677F6858}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE629A6F-10F8-4282-B554-2CEE6C104BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE629A6F-10F8-4282-B554-2CEE6C104BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE629A6F-10F8-4282-B554-2CEE6C104BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE629A6F-10F8-4282-B554-2CEE6C104BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{420A4759-70B9-40BA-9283-AD57D5EDC7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{420A4759-70B9-40BA-9283-AD57D5EDC7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{420A4759-70B9-40BA-9283-AD57D5EDC7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{420A4759-70B9-40BA-9283-AD57D5EDC7A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B56AEDA-E73E-4131-8B92-6E6CEF406281}
+	EndGlobalSection
+EndGlobal
