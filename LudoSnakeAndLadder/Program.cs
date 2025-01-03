@@ -13,8 +13,8 @@ builder.Services.AddSwaggerGen();
 
 
 var connection = builder.Configuration.GetConnectionString("DbConnection");
-//builder.Services.AddDbContext<SnakeDbContext>(option=>{ option.UseSqlServer(connection); },ServiceLifetime.Transient,ServiceLifetime.Transient);
-builder.Services.AddDbContext<SnakeDbContext>(option => { option.UseSqlServer(connection); },ServiceLifetime.Scoped,ServiceLifetime.Singleton);
+builder.Services.AddDbContext<SnakeDbContext>(option=>{ option.UseSqlServer(connection); },ServiceLifetime.Transient,ServiceLifetime.Transient);
+//builder.Services.AddDbContext<SnakeDbContext>(option => { option.UseSqlServer(connection); },ServiceLifetime.Scoped,ServiceLifetime.Singleton);
 builder.Services.AddScoped<PlayGameServices>();
 builder.Services.AddScoped<StartGameServices>();
 

@@ -1,4 +1,5 @@
-﻿using LudoSnakeAndLadder.Domain.Services;
+﻿using LudoSnakeAndLadder.Api.Models;
+using LudoSnakeAndLadder.Domain.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -20,11 +21,11 @@ namespace LudoSnakeAndLadder.MinimalApi.Controllers
         }
 
         [HttpPost("StartGame")]
-        public async Task<IActionResult> StartGame(string Player1Name, string Player2Name, string Player3Name, string Player4Name) {
+        public async Task<IActionResult> StartGame(StartGameRequest model) {
 
             try{
 
-             var response =  await  _GameStart.StartGame(Player1Name, Player2Name, Player3Name, Player4Name);
+             var response =  await  _GameStart.StartGame(model.Player1, model.Player2,model.Player3,model.Player4);
               
                 return Ok(response);
             
@@ -38,23 +39,23 @@ namespace LudoSnakeAndLadder.MinimalApi.Controllers
         }
 
         [HttpPost("PlayGame")]
-        public async Task<IActionResult> PlayGame(string gameCode,string Player1Name, string Player2Name, string Player3Name, string Player4Name)
+        public async Task<IActionResult> PlayGame(PlayGameRequest model)
         {
 
-            //try
+            try
             {
 
-                var response = await _GamePlay.PlayGame(gameCode,Player1Name, Player2Name, Player3Name, Player4Name);
+                var response = await _GamePlay.PlayGame(model.GameCode,model.Player1,model.Player2,model.Player3,model.Player4);
                 counter++;
 
                 return Ok(response);
 
             }
-          /*  catch (Exception ex)
+            catch (Exception ex)
             {
 
                 return StatusCode(500, ex.Message);
-            }*/
+            }
 
 
         }

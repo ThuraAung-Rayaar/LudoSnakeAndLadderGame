@@ -1,16 +1,28 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using LudoSnakeAndLadder.Databases.Models;
 using Microsoft.EntityFrameworkCore;
+//using Testing;
 
 
 
 Console.WriteLine("Hello, World!");
-
-SnakeDbContext _dbContext = new SnakeDbContext();
+Console.ReadLine();
+/*SnakeDbContext _dbContext = new SnakeDbContext();
 var exitGame = await _dbContext.GameRecords.AsNoTracking().ToListAsync();
-var ooon = Ulid.NewUlid();
+var ooon = Ulid.NewUlid();*/
 
-Console.WriteLine(ooon);
+/*
+SnakeGameClient snake = new SnakeGameClient("https://localhost:7056/");
+
+var rr =await snake.StartGame();
+
+
+Console.WriteLine(rr.Content);
+
+Console.WriteLine("FINISH");
+
+Console.ReadLine();*/
+
 /*string GameUID, Uid;
 do
 {

@@ -27,8 +27,15 @@ public class PlayGameServices
         if (!await GameCode.isGameExist(_dbContext)) return Result<PlayGameResponse>.NotFoundError("GAME Not Found");
 
         //calling playrecord for player turn
-        var LastGamePlay = await _dbContext.GamePlayRecords.MaxAsync(x => x.MoveId);
-        int counter = LastGamePlay == 0 ? 0 : LastGamePlay;
+
+        var GamePlayRecord = await _dbContext.GamePlayRecords.AsNoTracking().Select(x => x.MoveId).ToListAsync();
+        int LastGamePlay = 0;
+        if (GamePlayRecord.Any()) LastGamePlay = GamePlayRecord.Max();
+
+
+
+
+        int counter = LastGamePlay;
 
         if (playerCode.Count() > 4)
         {
@@ -93,7 +100,7 @@ public class PlayGameServices
 
         //readonly from snakeboard
         var cell =await _dbContext.SnakeBoards.FirstOrDefaultAsync(x => x.CellNum == newPosition);
-        if (cell is null || newPosition>100) { transaction.Rollback(); Result<PlayGameResponse>.GameSetUpError("Cell Record Not Found"); }
+        if (cell is null ) { transaction.Rollback(); Result<PlayGameResponse>.GameSetUpError("Cell Record Not Found"); }
 
 
         // need to improve switch
@@ -167,7 +174,7 @@ public class PlayGameServices
         string FirstMoveResult = $"Player {player.CharacterName} move from {gamePlay.OldPosition} to {gamePlay.NewPosition}\n";
         
 
-        PlayGameResponse gameResponse = new PlayGameResponse(counter, FirstMoveResult + CellCheckResult);
+        PlayGameResponse gameResponse = new PlayGameResponse(diceNum, FirstMoveResult + CellCheckResult);
 
         return Result<PlayGameResponse>.Success(gameResponse);
         

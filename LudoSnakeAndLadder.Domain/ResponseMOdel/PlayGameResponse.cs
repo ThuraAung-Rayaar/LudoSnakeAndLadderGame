@@ -23,8 +23,8 @@ public class PlayGameResponse
 
 public class PlayGameResponse2
 {
-    public string PlayerName { get; set; }
-    public string PlayerColor { get; set; }
+    public string PlayerName { get; set; } = "";
+    public string PlayerColor { get; set; } = "";
     public List<PlayedCell> PlayRecord { get; set; } = new List<PlayedCell>();
 
    
