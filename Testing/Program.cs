@@ -3,8 +3,6 @@ using LudoSnakeAndLadder.Databases.Models;
 using Microsoft.EntityFrameworkCore;
 //using Testing;
 
-
-
 Console.WriteLine("Hello, World!");
 Console.ReadLine();
 /*SnakeDbContext _dbContext = new SnakeDbContext();
